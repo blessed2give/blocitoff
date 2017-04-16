@@ -1,2 +1,13 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome to Blocitoff</h1>
+
+<h4>Users</h4>
+
+<div class="media">
+  <div class="media-body">
+    <%= @users.each do |user| %>
+    <h4 class="media-heading">
+      <p><%= user.email %></p>
+    </h4>
+    <% end %>
+  </div>
+</div>

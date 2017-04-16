@@ -2,7 +2,7 @@
 <p><%= current_user.email %></p>
 
 <div class="pull-right">
-  <%= link_to "New Task", new_user_item_path(@user), class: 'btn btn-success' %>
+  <%= link_to "New Task", new_user_item_path(current_user), class: 'btn btn-success' %>
 </div>
 
 <div class="media">
