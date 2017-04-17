@@ -10,6 +10,7 @@
     <%= @items.each do |item| %>
     <h4 class="media-heading">
       <%= item.name %>
+      <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %>
     </h4>
     <% end %>
   </div>
