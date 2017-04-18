@@ -1,4 +1,4 @@
-<h1>Users Profile</h1>
+<h1>User Profile</h1>
 <p><%= current_user.email %></p>
 
 <div class="pull-right">
@@ -7,9 +7,11 @@
 
 <div class="media">
   <div class="media-body">
-    <%= @items.each do |item| %>
+    <% @items.each do |item| %>
     <h4 class="media-heading">
       <%= item.name %>
+      <%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %>
+      <%= distance_of_time_in_words(item.created_at, Time.now) %>
     </h4>
     <% end %>
   </div>
